@@ -7,7 +7,7 @@ const apiUrl = `https://www.omdbapi/?apikey=${apikey}`;
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e) {
-    e.preventDefault();
+   // e.preventDefault();
     let inputReadyForUrl = formatInput(input.value);
     postRequest(inputReadyForUrl);
 }
