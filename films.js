@@ -2,7 +2,7 @@ const movieDiv = document.querySelector('#movies');
 const modalDiv = document.getElementsByClassName('modal-content')[0];
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-const apiUrl = ` http://www.omdbapi.com/?i=tt3896198&apikey=${apikey}`;
+const apiUrl = ` https://www.omdbapi.com/?i=tt3896198&apikey=${apikey}`;
 
 form.addEventListener("submit", handleSubmit);
 
@@ -44,7 +44,7 @@ const showMovies = (movies) => {
 };
 
 async function showMovie(id) {
-    const searchForASpecificMovie = await fetch(` http://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&i=${id}`);
+    const searchForASpecificMovie = await fetch(` https://www.omdbapi.com/?i=tt3896198&apikey=${apikey}&i=${id}`);
     const data = await searchForASpecificMovie.json();
     $('#modal').modal('show');
     showModal(data);
